@@ -1,0 +1,77 @@
+
+D
+java:S1659."'Declare "editText6" on a separate line.(Ÿœ¶æ8ëğ²Å¬.
+D
+java:S1659."'Declare "editText7" on a separate line.(Ÿœ¶æ8ëğ²Å¬.
+k	java:S100„"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ”Ì‰8œù‡­.
+j	java:S100Z"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü©ÍÂ8ç³•­.
+P
+java:S14446".Make this "public static mcontext" field final(Ã¨óšúÿÿÿÿ8ÿ•­.
+v
+java:S11046"TMake mcontext a static final constant or non-public and provide accessors if needed.(Ã¨óšúÿÿÿÿ8ÿ•­.
+D
+java:S1659Ô"!Declare "Min" on a separate line.(˜ìÛ…øÿÿÿÿ8ç³•­.
+:
+java:S1659Ó"#Declare "Month" on a separate line.(ÁÓÂÛ
+j	java:S100}"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡äşÓ8ç³•­.
+?
+java:S1659Ó"!Declare "Day" on a separate line.(ÁÓÂÛ8ç³•­.
+n	java:S117à"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÎ°¡8¥¥æ–­.
+H
+java:S1172Z"+Remove this unused method parameter "view".(ü©ÍÂ8ç³•­.
+^	java:S125È"<This block of commented-out lines of code should be removed.(‹ ‡øÿÿÿÿ8ç³•­.
+C
+java:S1659%"'Declare "checkBox4" on a separate line.(Ø¨»28„ËÁÛ¬.
+I
+java:S1172Š"+Remove this unused method parameter "view".(ËÛ8œù‡­.
+^	java:S125ª"<This block of commented-out lines of code should be removed.(ş„±şÿÿÿÿ8ç³•­.
+e	java:S116Ó"ORename this field "Year" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÓÂÛ
+k	java:S100­"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Ğ8ç³•­.
+p	java:S116Ô"NRename this field "Min" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ìÛ…øÿÿÿÿ8ç³•­.
+N
+java:S1172î"+Remove this unused method parameter "view".(óÂ’’ùÿÿÿÿ8œù‡­.
+t
+java:S1104ş"QMake reMin a static final constant or non-public and provide accessors if needed.(¨Úœ†şÿÿÿÿ8¶ªÚ­.
+k	java:S116Ó"NRename this field "Day" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÓÂÛ8ç³•­.
+o
+java:S1104©"QMake toast a static final constant or non-public and provide accessors if needed.(ÿæ8ç³•­.
+j	java:S116ê"MRename this field "AC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒØ8òá§­.
+`
+java:S1126‹"BReplace this if-then-else statement by a single method invocation.(ÖŒ8œù‡­.
+H
+java:S1172}"+Remove this unused method parameter "view".(‡äşÓ8ç³•­.
+P
+java:S1172›"-Remove this unused method parameter "dialog".(ÃØ¨Éÿÿÿÿÿ8ç³•­.
+p	java:S100î"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÂ’’ùÿÿÿÿ8œù‡­.
+D
+java:S1659."'Declare "editText4" on a separate line.(Ÿœ¶æ8™«áº¬.
+S
+java:S2696?"6Make the enclosing method "static" or remove this set.(øë»8ÔÔ•­.
+m	java:S116Ó"PRename this field "Month" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÓÂÛ8íÈœß¬.
+I
+java:S1172’"+Remove this unused method parameter "view".(Ô´åÎ8œù‡­.
+e
+java:S1126“"BReplace this if-then-else statement by a single method invocation.(ã¹ú•úÿÿÿÿ8œù‡­.
+I
+java:S1172Å"+Remove this unused method parameter "view".(Ì¹ª§8ç³•­.
+I
+java:S1172„"+Remove this unused method parameter "view".(ğ”Ì‰8œù‡­.
+D
+java:S1659."'Declare "editText5" on a separate line.(Ÿœ¶æ8™«áº¬.
+I
+java:S1172Ö"+Remove this unused method parameter "view".(²´¿’8ç³•­.
+u
+java:S1104ı"RMake reHour a static final constant or non-public and provide accessors if needed.(¶¨úÿÿÿÿ8¶ªÚ­.
+q
+java:S1104)"TMake editText a static final constant or non-public and provide accessors if needed.(‡ş¬ğ8è—Ş˜­.
+=
+java:S1659+"'Declare "checkBox2" on a separate line.(±¶·¤
+q	java:S116Ô"ORename this field "Hour" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ìÛ…øÿÿÿÿ8ç³•­.
+N
+java:S1172"+Remove this unused method parameter "view".(Ãğ£şÿÿÿÿ8ç³•­.
+I
+java:S1172­"+Remove this unused method parameter "view".(¶Ğ8ç³•­.
+l
+java:S1104ê"NMake AC a static final constant or non-public and provide accessors if needed.(ÒØ8òá§­.
+r
+java:S1104*"UMake editText2 a static final constant or non-public and provide accessors if needed.(şš¬Ğ8ı³Ş˜­.
