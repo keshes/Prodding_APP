@@ -6,15 +6,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Vibrator;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AlarmActivity extends AppCompatActivity{
+public class AlarmActivity extends AppCompatActivity {
 
-    TextView textView,textView2;
+    TextView textView, textView2;
     AlarmManager alarmManager;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +25,9 @@ public class AlarmActivity extends AppCompatActivity{
         setContentView(R.layout.activity_alarm);
 
         textView = findViewById(R.id.textView);
-        textView2=findViewById(R.id.textView2);
+        textView2 = findViewById(R.id.textView2);
         alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
 
         getSupportActionBar().setTitle("Alarm Activity");
@@ -33,39 +36,51 @@ public class AlarmActivity extends AppCompatActivity{
         textView.setText(text);
         textView2.setText(intent.getExtras().get("text2").toString());
 
-        /*int Year, Month, Day;
-        int Hour, Min;
-        Year = intent.getExtras().getInt("Year");
-        Toast.makeText(AlarmActivity.this, Year, Toast.LENGTH_SHORT);
-        Month = intent.getExtras().getInt("Month");
-        Day = intent.getExtras().getInt("Day");
-        Hour = intent.getExtras().getInt("Hour");
-        Min= intent.getExtras().getInt("Min");*/
+        if (((MainActivity) MainActivity.mcontext).vibration == 1) {
+            Log.e("진동실행", "정상");
+            vibrator.vibrate(
+                    new long[]{100, 1000, 100, 500, 100, 500, 100, 1000}, 0
 
-        int reHour,reMin;
-        int reHM;
-        reHour = intent.getExtras().getInt("reHour");
-        reMin = intent.getExtras().getInt("reMin");
-        reHM=(reHour*3600000)+(reMin*60000);
-
-        /*GregorianCalendar calendar = (GregorianCalendar) intent.getExtras().get("calender");
-        GregorianCalendar c= new GregorianCalendar(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH),
-                calendar.get(Calendar.HOUR)+reHour,
-                calendar.get(Calendar.MINUTE)+reMin);*/
-
-        PendingIntent pendingIntent = PendingIntent.getActivity(AlarmActivity.this, 30, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+reHM, pendingIntent);
-        } else {
-            alarmManager.setExact(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+reHM, pendingIntent);
+            );
         }
 
 
-    }
+            if (((MainActivity) MainActivity.mcontext).alarmonoff == 1) { //00:00마다 알림체크일때
+                Log.e("00:00마다 체크", "실행2");
+                int reHour, reMin;
+                int reHM;
+                reHour = ((MainActivity) MainActivity.mcontext).reHour;
+                reMin = ((MainActivity) MainActivity.mcontext).reMin;
+
+                reHM = (reHour * 3600000) + (reMin * 60000);
+
+
+                PendingIntent pendingIntent = PendingIntent.getActivity(AlarmActivity.this, 30, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + reHM, pendingIntent);
+                } else {
+                    alarmManager.setExact(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + reHM, pendingIntent);
+                }
+
+            } else { //각자알림 체크일때
+                Log.e("각자알림 체크", "실행2");
+                PendingIntent pendingIntent = PendingIntent.getActivity(AlarmActivity.this, 30, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (3600000 * 24), pendingIntent);
+                } else {
+                    alarmManager.setExact(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (3600000 * 24), pendingIntent);
+                }
+
+
+            }
+        }
+
 
 
 
     public void close(View view) {
         this.finish();
+        vibrator.cancel();
+        Log.e("진동실행", "끝");
     }
 }

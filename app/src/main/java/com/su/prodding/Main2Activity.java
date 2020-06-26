@@ -1,19 +1,21 @@
 package com.su.prodding;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class Main2Activity extends AppCompatActivity {
 
+    public String title;
+    public String text;
 
     Boolean AC;
-    LinearLayout list;
+    RecyclerView list;
+    RecyclerView.Adapter adapter;
+    RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,9 @@ public class Main2Activity extends AppCompatActivity {
         LayoutInflater inflater= (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         list=findViewById(R.id.list);
 
+        list.setHasFixedSize(true);
+        layoutManager= new LinearLayoutManager(this);
+        list.setLayoutManager(layoutManager);
 
 
 
@@ -32,16 +37,12 @@ public class Main2Activity extends AppCompatActivity {
 
 
 
-        Intent AlarmCreate=getIntent();
-        AC= (Boolean) AlarmCreate.getExtras().get("AC");
-        Log.e("AC값 잘 넘어왔니",AC.toString());
-
-        if(AC){
-            View newview=inflater.inflate(R.layout.inflate,null);
-            list.addView(newview);
 
 
-        }
+
+
+
+
 
     }
 

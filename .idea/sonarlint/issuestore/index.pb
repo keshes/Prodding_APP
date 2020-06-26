@@ -7,8 +7,6 @@ d
 4app/src/main/java/com/su/prodding/AlarmReceiver.java,e\5\e581775907aeae35b8ffd5ac1504ec3f30c55ec0
 c
 3app/src/main/java/com/su/prodding/MainActivity.java,b\7\b7a3d536bb0c0a439dd62aa21673c704b3a6a7a7
-`
-0app/src/main/java/com/su/prodding/infalte_j.java,0\3\03e5b46297c7600066a9984c93989a8d8cffaa5b
 d
 4app/src/main/java/com/su/prodding/Main2Activity.java,4\d\4d40826ba36044aab1442c4fb4dd93a47c5eb5f5
 u
@@ -17,8 +15,6 @@ d
 4app/src/main/res/drawable/ic_launcher_background.xml,4\9\49845c622cb06d895975c7b1e3f943e320bce688
 h
 8app/src/main/res/drawable-v24/ic_launcher_foreground.xml,0\7\078508c831007ccb3938b355f0d30a8368f99a8d
-Z
-*app/src/main/res/layout/activity_alarm.xml,9\4\94734c14391f91b669ec0968c3139d561a9c3c52
 b
 2app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml,8\e\8e27ba16c655f421171956147d0fde89b7d25d17
 h

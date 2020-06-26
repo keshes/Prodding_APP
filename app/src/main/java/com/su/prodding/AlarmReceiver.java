@@ -25,25 +25,41 @@ public class AlarmReceiver extends BroadcastReceiver {
 
 
 
+           if (((MainActivity) MainActivity.mcontext).alarmonoff==1) {
 
-        //반복알람을 위해 알람이 울리면 다시 새로운 알람을 설정
-        AlarmManager alarmManager= (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        PendingIntent p=PendingIntent.getBroadcast(context,20,i,PendingIntent.FLAG_UPDATE_CURRENT);
+                Log.e("00:00마다 체크","실행");//00:00마다 알림 체크일때
 
-        int reHour,reMin,reHM;
-        reHour=((MainActivity) MainActivity.mcontext).reHour;
-        reMin=((MainActivity) MainActivity.mcontext).reMin;
-        reHM=(reHour*3600000)+(reMin*60000);
+                //반복알람을 위해 알람이 울리면 다시 새로운 알람을 설정
+                AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+                PendingIntent p = PendingIntent.getBroadcast(context, 20, i, PendingIntent.FLAG_UPDATE_CURRENT);
 
+                int reHour, reMin, reHM;
+                reHour = ((MainActivity) MainActivity.mcontext).reHour;
+                reMin = ((MainActivity) MainActivity.mcontext).reMin;
+                reHM = (reHour * 3600000) + (reMin * 60000);
 
-        Log.e(TAG, String.valueOf(reHM));
+                Log.e(TAG, String.valueOf(reHM));
 
-        //알람설정(20초후)
-        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
-            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,System.currentTimeMillis()+reHM,p);
-        }else{
-            alarmManager.setExact(AlarmManager.RTC_WAKEUP,System.currentTimeMillis()+reHM,p);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + reHM, p);
+                } else {
+                    alarmManager.setExact(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + reHM, p);
+                }
+            }else{
+
+                Log.e("각자알림 체크","실행");
+
+                //반복알람을 위해 알람이 울리면 다시 새로운 알람을 설정
+                AlarmManager alarmManager2 = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+                PendingIntent p2 = PendingIntent.getBroadcast(context, 20, i, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    alarmManager2.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (3600000 * 24), p2);
+                } else {
+                    alarmManager2.setExact(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (3600000 * 24), p2);
+                }
+
+           }
         }
     }
-}
 

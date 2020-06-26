@@ -99,7 +99,7 @@
                     android:textAllCaps="false" />
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/random"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -109,7 +109,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                >
 
                 <CheckBox
                     android:id="@+id/checkBox1"
@@ -134,7 +135,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                >
+
 
                 <CheckBox
                     android:id="@+id/checkBox2"
@@ -151,29 +154,88 @@
                     android:focusableInTouchMode="false"
                     android:text="각자 지정"
                     android:textSize="18sp" />
+
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/editText4"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="time"
-                android:text="00 : 00"
-                android:focusableInTouchMode="false"
-                android:textAlignment="center"
-                android:onClick="AlarmTime"/>
+                android:layout_weight="0"
+                android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/editText5"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="메모 알람 시간"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:focusableInTouchMode="false"
+                    android:inputType="time"
+                    android:onClick="AlarmTime"
+                    android:text="00 : 00"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="time"
-                android:text="00 : 00"
-                android:focusableInTouchMode="false"
-                android:textAlignment="center"
-                android:onClick="ToastTime"/>
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="토스트 알람 시간"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:focusableInTouchMode="false"
+                    android:inputType="time"
+                    android:onClick="ToastTime"
+                    android:text="00 : 00"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0"
+                    app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+                <ImageView
+                    android:id="@+id/vibrate"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0"
+                    android:layout_marginLeft="20dp"
+                    app:srcCompat="@drawable/vibrate" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -181,7 +243,7 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox3"
+                    android:id="@+id/checkBox5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
@@ -212,7 +274,7 @@
 
                 <EditText
                     android:id="@+id/editText7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
@@ -231,7 +293,7 @@
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button"
+                android:text="CLEAR"
                 android:onClick="clickBtn3"/>
 
         </LinearLayout>
